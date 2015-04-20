@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 05 - Finding Element</title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script>
+      $(document).ready(function(){
+        //Get first favourite programming language
+        var first = $('.lang-list li').first();
+        console.log(first.text());
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>My Favourite Programming Languages</h1>
+      <ol class='lang-list'>
+        <li>JavaScript</li>
+        <li>JAVA</li>
+        <li>Python</li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 09 - DOM Interaction</title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('button.random').on('click',function(){
+          var msg = $('<p></p>');
+          msg.text(Math.random()*10);
+          $('.container').html(msg);
+          //$(this).off('click');
+          $(this).remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button class='random'>Get Random Number</button>
+    <div class='container'>
+    </div>
+  </body>
+</html>

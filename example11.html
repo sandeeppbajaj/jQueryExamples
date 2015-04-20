@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 11 - Event Propogation</title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script>
+      var prices = {
+        'London': '$300',
+        'Paris': '$250',
+        'Rome': '$200',
+        'New York': '$200',
+        'Las Vegas': '$100',
+        'Los Angeles': '$50'
+      };
+      $(document).ready(function(){
+        $('li').click('click',function(){
+          var city = $(this).text();
+          console.log(city);
+          $('#price').text('Price for '+city+':'+prices[city]);
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Places I want to visit (click any city)</h1>
+      <ul class='destinations'>
+        <li>Europe:
+            <ol class='europe'>
+              <li>London</li>
+              <li>Paris</li>
+              <li>Rome</li>
+            </ol>
+        </li>
+        <li>United States:
+            <ol id='usa'>
+              <li>New York</li>
+              <li>Las Vegas</li>
+              <li>Los Angeles</li>
+            </ol>
+        </li>
+      </ul>
+      <p id="price">
+      </p>
+    </div>
+  </body>
+</html>

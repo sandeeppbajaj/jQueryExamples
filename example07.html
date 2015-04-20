@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 07 - Additional Selection Methods</title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script>
+      $(document).ready(function(){
+        //Get all cities - using descendant selection
+        console.log($('.destinations li'));
+
+        //Get regions only - using direct child selection
+        console.log($('.destinations > li'));
+
+        //GET cities - using mulitple selction of class and id
+        console.log($('.europe>li,#usa>li'));
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Places I want to visit</h1>
+      <ul class='destinations'>
+        <li>Europe:
+            <ol class='europe'>
+              <li>London</li>
+              <li>Paris</li>
+              <li>Rome</li>
+            </ol>
+        </li>
+        <li>United States:
+            <ol id='usa'>
+              <li>New York</li>
+              <li>Las Vegas</li>
+              <li>Los Angeles</li>
+            </ol>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 04 - DOM Ready</title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script>
+      $(document).ready(function(){
+        console.log($('h1').text());
+        $('h1').text('THIS IS MY HEADER');
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#">My Link</a>
+    <h1>My Header</h1>
+  </body>
+</html>

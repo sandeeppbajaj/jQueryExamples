@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 09 - On Click Event</title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('button').on('click',function(){
+          var msg = $('<p></p>');
+          msg.text(Math.random()*10);
+          //msg.appendTo('.container');
+          $('.container').html(msg);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Get Random Number</button>
+    <div class='container'>
+    </div>
+  </body>
+</html>
